@@ -54,13 +54,17 @@ jobs:
             echo "no coverage"
           fi
 
-      - name: Upload coverage report as artifact
+      - name: Coverage → Job Summary
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage
-          path: |
-            dist/**
-            reports/**
-          if-no-files-found: ignore
-          retention-days: 7
+        run: |
+          node -e "const fs=require('fs');const p='reports/coverage/coverage-summary.json';const s=fs.readFileSync(p,'utf8');const j=JSON.parse(s).total;const md=[
+            '## Test Coverage',
+            '',
+            '| Metric | % | Covered / Total |',
+            '|--|--:|--:|',
+            `| Statements | ${j.statements.pct}% | ${j.statements.covered} / ${j.statements.total} |`,
+            `| Branches   | ${j.branches.pct}%   | ${j.branches.covered}   / ${j.branches.total}   |`,
+            `| Functions  | ${j.functions.pct}%  | ${j.functions.covered}  / ${j.functions.total}  |`,
+            `| Lines      | ${j.lines.pct}%      | ${j.lines.covered}      / ${j.lines.total}      |`,
+            ''
+          ].join('\n'); fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, md);"

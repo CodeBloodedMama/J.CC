@@ -13,8 +13,7 @@ module.exports = {
 
   collectCoverage: true,
   coverageDirectory: "reports/coverage",
-  coverageReporters: ["text", "lcov", "html"],
-  collectCoverageFrom: ["src/**/*.{ts,tsx}", "!src/index.tsx", "!src/App.tsx"],
+  coverageReporters: ["text", "json-summary"],
 
   transform: {
     "^.+\\.tsx?$": [
