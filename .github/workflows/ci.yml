@@ -45,19 +45,29 @@ jobs:
           if-no-files-found: error
           retention-days: 7
 
-      - name: Coverage
+      - name: Coverage (console + files)
         if: always()
         run: |
           if npm run | grep -q " coverage"; then
             npm run coverage
+            echo "== ls reports/coverage =="
+            ls -la reports/coverage || true
+            echo "== cat coverage-summary =="
+            cat reports/coverage/coverage-summary.json || true
           else
             echo "no coverage"
           fi
 
       - name: Coverage → Job Summary
         if: always()
+        shell: bash
         run: |
-          node -e "const fs=require('fs');const p='reports/coverage/coverage-summary.json';const s=fs.readFileSync(p,'utf8');const j=JSON.parse(s).total;const md=[
+          node - <<'NODE'
+          const fs = require('fs');
+          const p = 'reports/coverage/coverage-summary.json';
+          const s = fs.readFileSync(p, 'utf8');
+          const j = JSON.parse(s).total;
+          const md = [
             '## Test Coverage',
             '',
             '| Metric | % | Covered / Total |',
@@ -67,4 +77,6 @@ jobs:
             `| Functions  | ${j.functions.pct}%  | ${j.functions.covered}  / ${j.functions.total}  |`,
             `| Lines      | ${j.lines.pct}%      | ${j.lines.covered}      / ${j.lines.total}      |`,
             ''
-          ].join('\n'); fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, md);"
+          ].join('\n');
+          fs.writeFileSync(process.env.GITHUB_STEP_SUMMARY, md);
+          NODE
