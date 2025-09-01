@@ -1,0 +1,337 @@
+[
+  {
+    "id": "p001",
+    "name": "Sofa NORDEN 3-personers",
+    "sku": "SOFA-001",
+    "category": "Sofa",
+    "price": 3499,
+    "currency": "DKK",
+    "stock": 12,
+    "rating": 4.3,
+    "createdAt": "2025-07-12",
+    "imageUrl": "",
+    "description": "Komfortabel 3-personers sofa med slidstærkt stof og træben.",
+    "material": [
+      "Stof",
+      "Eg"
+    ],
+    "color": [
+      "Mørkegrå"
+    ],
+    "dimensions": "210×90×85 cm"
+  },
+  {
+    "id": "p002",
+    "name": "Dyne BASIC 140×200",
+    "sku": "DYNE-140200",
+    "category": "Dyne",
+    "price": 199,
+    "currency": "DKK",
+    "stock": 0,
+    "rating": 3.9,
+    "createdAt": "2025-08-15",
+    "imageUrl": "",
+    "description": "Let og vaskbar helårsdyne med OEKO-TEX.",
+    "material": [
+      "Mikrofiber"
+    ],
+    "color": [
+      "Hvid"
+    ],
+    "dimensions": "140×200 cm",
+    "certifications": [
+      "OEKO-TEX"
+    ]
+  },
+  {
+    "id": "p003",
+    "name": "Pude DREAM 60×63",
+    "sku": "PUDE-6063",
+    "category": "Pude",
+    "price": 129,
+    "currency": "DKK",
+    "stock": 34,
+    "rating": 4.1,
+    "createdAt": "2025-06-01",
+    "imageUrl": "",
+    "description": "Blød pude med god støtte til nakke og skuldre.",
+    "material": [
+      "Mikrofiber"
+    ],
+    "color": [
+      "Hvid"
+    ],
+    "dimensions": "60×63 cm"
+  },
+  {
+    "id": "p004",
+    "name": "Reol OMBY 4 hylder",
+    "sku": "REOL-OMBY",
+    "category": "Reol",
+    "price": 599,
+    "currency": "DKK",
+    "stock": 7,
+    "rating": 4.0,
+    "createdAt": "2025-05-20",
+    "imageUrl": "",
+    "description": "Praktisk reol i melamin – perfekt til stue eller kontor.",
+    "material": [
+      "Melamin"
+    ],
+    "color": [
+      "Hvid"
+    ],
+    "dimensions": "60×30×150 cm"
+  },
+  {
+    "id": "p005",
+    "name": "Seng AURA 140×200",
+    "sku": "SENG-140200",
+    "category": "Seng",
+    "price": 3999,
+    "currency": "DKK",
+    "stock": 4,
+    "rating": 4.6,
+    "createdAt": "2025-08-10",
+    "imageUrl": "",
+    "description": "Stabil rammemadras med komfortzoner.",
+    "material": [
+      "Stål",
+      "Skum",
+      "Stof"
+    ],
+    "color": [
+      "Antracit"
+    ],
+    "dimensions": "140×200 cm"
+  },
+  {
+    "id": "p006",
+    "name": "Gardin LINA mørklægning",
+    "sku": "GARDIN-LINA",
+    "category": "Gardin",
+    "price": 249,
+    "currency": "DKK",
+    "stock": 26,
+    "rating": 4.2,
+    "createdAt": "2025-03-02",
+    "imageUrl": "",
+    "description": "Mørklægningsgardin med enkel montering.",
+    "material": [
+      "Polyester"
+    ],
+    "color": [
+      "Sort"
+    ],
+    "dimensions": "140×220 cm"
+  },
+  {
+    "id": "p007",
+    "name": "Sofabord BIRK rund",
+    "sku": "BORD-BIRK",
+    "category": "Bord",
+    "price": 499,
+    "currency": "DKK",
+    "stock": 19,
+    "rating": 4.0,
+    "createdAt": "2025-04-10",
+    "imageUrl": "",
+    "description": "Rundt sofabord i finér med natur-look.",
+    "material": [
+      "Finér",
+      "Bøg"
+    ],
+    "color": [
+      "Natur"
+    ],
+    "dimensions": "Ø70×45 cm"
+  },
+  {
+    "id": "p008",
+    "name": "Kommode SORA 3 skuffer",
+    "sku": "KOMMODE-SORA",
+    "category": "Kommode",
+    "price": 899,
+    "currency": "DKK",
+    "stock": 9,
+    "rating": 4.1,
+    "createdAt": "2025-01-12",
+    "imageUrl": "",
+    "description": "Kompakt kommode med tre skuffer.",
+    "material": [
+      "Melamin"
+    ],
+    "color": [
+      "Hvid"
+    ],
+    "dimensions": "80×40×75 cm"
+  },
+  {
+    "id": "p009",
+    "name": "Lænestol RELAX",
+    "sku": "LAENESTOL-RELAX",
+    "category": "Lænestol",
+    "price": 1499,
+    "currency": "DKK",
+    "stock": 5,
+    "rating": 4.4,
+    "createdAt": "2025-07-01",
+    "imageUrl": "",
+    "description": "Komfortabel lænestol med polstring og armlæn.",
+    "material": [
+      "Stof",
+      "Træ"
+    ],
+    "color": [
+      "Beige"
+    ],
+    "dimensions": "85×90×100 cm"
+  },
+  {
+    "id": "p010",
+    "name": "Sengetøj COTTON 140×200",
+    "sku": "SENGETOEJ-COTTON",
+    "category": "Sengetøj",
+    "price": 179,
+    "currency": "DKK",
+    "stock": 40,
+    "rating": 3.8,
+    "createdAt": "2025-08-20",
+    "imageUrl": "",
+    "description": "100% bomuld, blødt og åndbart.",
+    "material": [
+      "Bomuld"
+    ],
+    "color": [
+      "Lysegrå"
+    ],
+    "dimensions": "140×200 cm"
+  },
+  {
+    "id": "p011",
+    "name": "Skab TORA 2-dørs",
+    "sku": "SKAB-TORA",
+    "category": "Skab",
+    "price": 1299,
+    "currency": "DKK",
+    "stock": 3,
+    "rating": 4.0,
+    "createdAt": "2025-02-05",
+    "imageUrl": "",
+    "description": "2-dørs garderobeskab med hylder og bøjlestang.",
+    "material": [
+      "Melamin"
+    ],
+    "color": [
+      "Hvid"
+    ],
+    "dimensions": "100×60×200 cm"
+  },
+  {
+    "id": "p012",
+    "name": "Puf NORDIC",
+    "sku": "PUF-NORDIC",
+    "category": "Puf",
+    "price": 299,
+    "currency": "DKK",
+    "stock": 22,
+    "rating": 4.1,
+    "createdAt": "2025-08-05",
+    "imageUrl": "",
+    "description": "Praktisk puf som ekstra siddeplads eller fodskammel.",
+    "material": [
+      "Stof"
+    ],
+    "color": [
+      "Blå"
+    ],
+    "dimensions": "40×40×40 cm"
+  },
+  {
+    "id": "p013",
+    "name": "Bord LIVA spisebord",
+    "sku": "BORD-LIVA",
+    "category": "Bord",
+    "price": 1799,
+    "currency": "DKK",
+    "stock": 6,
+    "rating": 4.2,
+    "createdAt": "2025-06-20",
+    "imageUrl": "",
+    "description": "Plads til familien – robust bord i træ-look.",
+    "material": [
+      "Melamin",
+      "Eg"
+    ],
+    "color": [
+      "Eg"
+    ],
+    "dimensions": "180×90×75 cm"
+  },
+  {
+    "id": "p014",
+    "name": "Dyne LUX 140×220",
+    "sku": "DYNE-140220",
+    "category": "Dyne",
+    "price": 599,
+    "currency": "DKK",
+    "stock": 8,
+    "rating": 4.7,
+    "createdAt": "2025-08-22",
+    "imageUrl": "",
+    "description": "Luksusdyne med god varme og lav vægt.",
+    "material": [
+      "Dun",
+      "Bomuld"
+    ],
+    "color": [
+      "Hvid"
+    ],
+    "dimensions": "140×220 cm",
+    "certifications": [
+      "OEKO-TEX"
+    ]
+  },
+  {
+    "id": "p015",
+    "name": "Gardin BREEZE lysfiltrerende",
+    "sku": "GARDIN-BREEZE",
+    "category": "Gardin",
+    "price": 199,
+    "currency": "DKK",
+    "stock": 15,
+    "rating": 3.9,
+    "createdAt": "2025-05-02",
+    "imageUrl": "",
+    "description": "Lysfiltrerende gardin til stuen.",
+    "material": [
+      "Polyester"
+    ],
+    "color": [
+      "Hvid"
+    ],
+    "dimensions": "140×220 cm"
+  },
+  {
+    "id": "p016",
+    "name": "Sofa MODERN hjørnesofa",
+    "sku": "SOFA-MODERN",
+    "category": "Sofa",
+    "price": 6999,
+    "currency": "DKK",
+    "stock": 2,
+    "rating": 4.8,
+    "createdAt": "2025-07-25",
+    "imageUrl": "",
+    "description": "Stor hjørnesofa med chaiselong og opbevaring.",
+    "material": [
+      "Stof",
+      "Træ",
+      "Skum"
+    ],
+    "color": [
+      "Mørkegrå"
+    ],
+    "dimensions": "280×180×90 cm"
+  }
+]

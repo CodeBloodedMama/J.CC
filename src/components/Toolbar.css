@@ -1,0 +1,65 @@
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.toolbar__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.toolbar__input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-width: 12rem;
+}
+.toolbar__select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.toolbar__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.toolbar__price {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.toolbar__price-input {
+  width: 7rem;
+}
+.toolbar__dash {
+  opacity: 0.6;
+}
+.toolbar__reset {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-muted);
+  cursor: pointer;
+  color: rgb(251, 248, 248);
+}
+.toolbar__reset:hover {
+  background: var(--bg-hover);
+}
+@media (max-width: 480px) {
+  .toolbar__input {
+    min-width: unset;
+    flex: 1 1 100%;
+  }
+  .toolbar__select {
+    flex: 1 1 48%;
+  }
+  .toolbar__price {
+    width: 100%;
+  }
+  .toolbar__price-input {
+    flex: 1 1 45%;
+  }
+}

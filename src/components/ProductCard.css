@@ -1,0 +1,64 @@
+
+.card {
+     display: grid;
+     grid-template-rows: 160px auto; 
+     border: 1px solid var(--border); 
+     border-radius: 12px; 
+     overflow: hidden; 
+     background: var(--bg); 
+     box-shadow: var(--shadow); 
+     cursor: pointer; 
+    }
+
+.card:focus-visible {
+     outline: 2px solid var(--brand); 
+     outline-offset: 2px; 
+    }
+.card__img { 
+    background: var(--bg-muted); 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+}
+
+.card__img-placeholder {
+    font-size: .9rem; 
+    color: var(--muted); 
+}
+.card__body { 
+    padding: .75rem .9rem; 
+    display:flex; 
+    flex-direction: column; 
+    gap: .5rem; 
+}
+.card__title { 
+    margin: 0; 
+    font-size: 1rem; 
+    line-height: 1.3; 
+}
+
+.card__meta { 
+    display:flex; 
+    flex-wrap: wrap; 
+    gap: .5rem; 
+    align-items:center; 
+}
+.price { 
+    font-weight: 600;
+ }
+
+.badge { 
+    padding: .2rem .5rem; 
+    border-radius: 999px; 
+    background: var(--bg-muted); 
+    border: 1px solid var(--border); 
+    font-size: .75rem; 
+}
+.badge--ok { 
+    background: #015816; 
+    border-color: #063d12; 
+}
+.badge--warn { 
+    background: #880714; 
+    border-color: #514114; 
+}

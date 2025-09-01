@@ -1,0 +1,14 @@
+
+.detail { padding: 1rem 0; }
+.back { display:inline-block; margin-bottom: .5rem; text-decoration: none; }
+.detail__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.detail__media { min-height: 280px; background: var(--bg-muted); display:flex; align-items:center; justify-content:center; border-radius: 12px; border: 1px solid var(--border); }
+.detail__img-placeholder { color: var(--muted); }
+.detail__info { display:flex; flex-direction:column; gap: .75rem; }
+.detail__title { margin: 0; }
+.detail__price { font-weight: 700; font-size: 1.25rem; }
+.detail__meta { display:grid; grid-template-columns: max-content 1fr; gap: .25rem .75rem; }
+.detail__desc { margin-top: .5rem; color: var(--muted); }
+@media (max-width: 768px) {
+  .detail__grid { grid-template-columns: 1fr; }
+}
