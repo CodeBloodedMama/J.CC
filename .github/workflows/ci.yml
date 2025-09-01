@@ -44,3 +44,23 @@ jobs:
           path: dist
           if-no-files-found: error
           retention-days: 7
+
+      - name: Coverage
+        if: always()
+        run: |
+          if npm run | grep -q " coverage"; then
+            npm run coverage
+          else
+            echo "no coverage"
+          fi
+
+      - name: Upload coverage report as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: |
+            dist/**
+            reports/**
+          if-no-files-found: ignore
+          retention-days: 7
