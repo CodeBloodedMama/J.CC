@@ -1,4 +1,4 @@
-/** @type {import('jest').Config} */
+export {};
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "jsdom",
@@ -8,7 +8,7 @@ module.exports = {
 
   moduleNameMapper: {
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
-    "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/test/__mocks__/fileMock.js",
+    "\\.(png|jpg|jpeg|gif|svg)$": "<rootDir>/__tests__/__mocks__/fileMock.js",
   },
 
   collectCoverage: true,
