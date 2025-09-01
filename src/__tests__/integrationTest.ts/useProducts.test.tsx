@@ -1,11 +1,25 @@
 import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
+
+jest.mock("../../services/JsonProductRepository", () => {
+  return {
+    JsonProductRepository: {
+      list: jest.fn(), // <-- vi styrer denne i testen
+      get: jest.fn(),
+      create: jest.fn(),
+      update: jest.fn(),
+      delete: jest.fn(),
+    },
+  };
+});
+
 import { useProducts } from "../../application/useProducts";
-import * as Repo from "../../services/JsonProductRepository";
+import { JsonProductRepository } from "../../services/JsonProductRepository";
 import type { Product } from "../../domain/types";
 
-function HookProbe() {
+// 2) Lille probe-komponent til at "læse" hookens state
+function Probe() {
   const { state, products, categories, setFilters, setSortKey } = useProducts();
   return (
     <div>
@@ -30,9 +44,14 @@ const mk = (over: Partial<Product>): Product => ({
   ...over,
 });
 
-describe("useProducts (integration light)", () => {
-  it("loader data, bygger kategorier og reagerer på filtre/sortering", async () => {
-    const list: Product[] = [
+describe("useProducts integration-light", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+    jest.resetAllMocks();
+  });
+
+  test("loader, bygger kategorier, reagerer på filtre/sortering", async () => {
+    (JsonProductRepository.list as jest.Mock).mockResolvedValueOnce([
       mk({
         id: "a",
         name: "Sofa",
@@ -54,24 +73,25 @@ describe("useProducts (integration light)", () => {
         price: 129,
         createdAt: "2025-01-01",
       }),
-    ];
-    jest.spyOn(Repo.JsonProductRepository, "list").mockResolvedValueOnce(list);
+    ]);
 
-    render(<HookProbe />);
+    render(<Probe />);
 
-    expect(screen.getByTestId("state").textContent).toBe("loading");
+    expect(screen.getByTestId("state")).toHaveTextContent("loading");
 
     await waitFor(() => {
-      expect(screen.getByTestId("state").textContent).toBe("ready");
-      expect(screen.getByTestId("count").textContent).toBe("3");
-      expect(screen.getByTestId("cats").textContent).toBe("Dyne,Pude,Sofa");
+      expect(screen.getByTestId("state")).toHaveTextContent("ready");
+      expect(screen.getByTestId("count")).toHaveTextContent("3");
+      expect(screen.getByTestId("cats")).toHaveTextContent("Dyne,Pude,Sofa"); // alfabetisk
     });
 
+    // Filter
     screen.getByText("set-q").click();
     await waitFor(() => {
-      expect(screen.getByTestId("count").textContent).toBe("1");
+      expect(screen.getByTestId("count")).toHaveTextContent("1");
     });
 
+    // Sort (på 1 resultat ændrer det ikke ordren; jeg tjekker blot at state er stabil)
     screen.getByText("set-sort").click();
     expect(screen.getByTestId("state")).toHaveTextContent("ready");
   });
