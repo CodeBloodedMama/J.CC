@@ -1,3 +1,14 @@
+.toolbar__search {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-accent);
+  color: white;
+  cursor: pointer;
+}
+.toolbar__search:hover {
+  background: var(--bg-hover);
+}
 .toolbar {
   display: flex;
   flex-direction: column;

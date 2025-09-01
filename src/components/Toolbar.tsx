@@ -118,18 +118,7 @@ export default function Toolbar({
           <option value="nameZA">Navn (Å → A)</option>
           <option value="ratingDesc">Rating (høj → lav)</option>
         </select>
-        <button
-          className="toolbar__search"
-          onClick={handleSearch}
-          style={{
-            padding: ".5rem .75rem",
-            border: "1px solid var(--border)",
-            borderRadius: 8,
-            background: "var(--bg-accent)",
-            color: "white",
-            cursor: "pointer",
-          }}
-        >
+        <button className="toolbar__search" onClick={handleSearch}>
           Søg
         </button>
         <button
