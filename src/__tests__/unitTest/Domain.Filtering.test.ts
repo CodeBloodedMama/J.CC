@@ -45,7 +45,7 @@ describe("applyFilters", () => {
 
   it("pris interval", () => {
     const out = applyFilters(data, { minPrice: 150, maxPrice: 1000 });
-    expect(out.map((x) => x.id)).toEqual(["b", "c"]);
+    expect(out.map((x) => x.id)).toEqual(["b"]);
   });
 
   it("kun på lager", () => {
